@@ -1,0 +1,26 @@
+.topo_info{
+    height: 100%;
+    width: auto;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.foto_info_pokemon{
+    height: 300px;
+
+}
+
+.nome_pokemon{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.atributos_info{
+    height: 100%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}

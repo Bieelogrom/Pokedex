@@ -1,0 +1,26 @@
+.caixa_pokemon{
+    width: 200px;
+    height: 200px;
+    background: #E0E0E0;
+    border-radius: 15px;
+}
+
+.img_Pokemon{
+    height: 100%;
+}
+
+.Num_Pokedex{
+    font-size: 14px;
+}
+
+.Nom_Pokemon{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.infos_Pokemon{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px;
+    gap: 5px;
+}
