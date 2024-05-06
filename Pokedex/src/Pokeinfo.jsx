@@ -1,25 +1,34 @@
 import './Pokeinfo.css'
 import Bulbasauro from './assets/001.png'
 
-function Pokeinfo(){
-    const atributos = ["HP :", "Ataque :", "Defesa :", "Ataque Especial :", "Defesa Especial :", "Velocidade :"]
-    const listarAtributos = atributos.map(atributo => <li>{atributo}</li>)
-
-
+function Pokeinfo({ data }) {
     return (
         <section>
-            <div className='topo_info'>
-                <p className='nome_pokemon'>Bulbasaur</p>
-                <img src={Bulbasauro} alt="Bulbasauro" className='foto_info_pokemon'/>
-            </div>
-            <div>
+            {
+                (!data) ? "" : (
+                    <>
+                        <div className='topo_info'>
+                            <p className='nome_pokemon'>{data.name}</p>
+                            <img src={data.sprites.front_default} alt="Bulbasauro" className='foto_info_pokemon' />
+                        </div>
+                        <div>
 
-            </div>
-            <div className='atributos_info'>
-                <ul>
-                    {listarAtributos}
-                </ul>
-            </div>
+                        </div>
+                        <div className='atributos_info'>
+                            <ul>
+                                {
+                                    data.stats.map(poke=>{
+                                        return(
+                                                <li>{poke.stat.name}:{poke.base_stat}</li>
+                                        )
+                                    })
+                                }
+                            </ul>
+                        </div>
+                    </>
+                )
+            }
+
         </section>
     );
 }
